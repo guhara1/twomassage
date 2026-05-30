@@ -1,6 +1,6 @@
 export const business = {
   name: "투마사지",
-  legalName: "투마사지 방문 웰니스 케어",
+  legalName: "투마사지 출장마사지 웰니스 케어",
   phone: "010-0000-0000",
   kakao: "https://pf.kakao.com/_placeholder",
   email: "care@twomassage.kr",
@@ -8,7 +8,7 @@ export const business = {
   address: "서울특별시 강남구 테헤란로 000",
   registration: "사업자등록번호 000-00-00000",
   description:
-    "검증된 전문 테라피스트가 고객님의 공간으로 방문하는 합법 방문 웰니스 케어 서비스입니다.",
+    "검증된 전문 테라피스트가 고객님의 공간으로 찾아가는 합법 출장마사지 웰니스 케어 서비스입니다.",
   principles: ["합법 운영", "예약제 상담", "투명한 요금", "위생 체크리스트", "부적절한 요청 거절"]
 };
 
@@ -39,8 +39,11 @@ export const mainNav = [
     href: "/areas",
     items: [
       ["강남 출장마사지", "/areas/gangnam"],
-      ["송파 출장마사지", "/areas/songpa"],
-      ["마포 출장마사지", "/areas/mapo"]
+      ["수원 출장마사지", "/areas/suwon"],
+      ["인천 출장마사지", "/areas/incheon"],
+      ["용인 출장마사지", "/areas/yongin"],
+      ["부산 출장마사지", "/areas/busan"],
+      ["성남 출장마사지", "/areas/seongnam"]
     ]
   },
   {

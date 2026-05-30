@@ -25,7 +25,7 @@ export function localBusinessSchema() {
       streetAddress: business.address,
       addressCountry: "KR"
     },
-    areaServed: ["서울", "강남", "송파", "마포"],
+    areaServed: ["강남", "수원", "인천", "용인", "부산", "성남"],
     priceRange: "90000 KRW-165000 KRW"
   };
 }
@@ -50,7 +50,7 @@ export function serviceSchema(name: string, description: string, url: string) {
       name: business.legalName,
       url: absoluteUrl("/")
     },
-    areaServed: ["서울", "강남", "송파", "마포"],
+    areaServed: ["강남", "수원", "인천", "용인", "부산", "성남"],
     url: absoluteUrl(url)
   };
 }

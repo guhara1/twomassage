@@ -20,7 +20,7 @@ export default function WellnessGuidePage() {
       <section className="section">
         <div className="container">
           <h1 className="text-4xl font-bold">웰니스 가이드</h1>
-          <p className="mt-5 max-w-3xl leading-8 text-muted-foreground">검색 순위 조작을 위한 대량 콘텐츠가 아니라, 방문 웰니스 서비스를 안전하게 이용하기 위한 생활 정보와 주의사항을 제공합니다.</p>
+          <p className="mt-5 max-w-3xl leading-8 text-muted-foreground">검색 순위 조작을 위한 대량 콘텐츠가 아니라, 출장마사지 웰니스 서비스를 안전하게 이용하기 위한 생활 정보와 주의사항을 제공합니다.</p>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {posts.map((post) => {
               const author = authors.find((item) => item.slug === post.author);

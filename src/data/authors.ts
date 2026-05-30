@@ -3,7 +3,7 @@ export const authors = [
     slug: "minseo-kim",
     name: "김민서",
     role: "웰니스 콘텐츠 에디터",
-    career: "방문 웰니스 서비스 운영 콘텐츠 6년",
+    career: "출장마사지 웰니스 서비스 운영 콘텐츠 6년",
     specialty: "마사지 이용 가이드, 고객 안전 정책, 직장인 피로 관리",
     contact: "editor@twomassage.kr",
     updatedAt: "2026-05-30"

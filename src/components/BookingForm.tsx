@@ -9,7 +9,7 @@ export function BookingForm() {
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold">이름<input className={inputClass} name="name" required /></label>
         <label className="grid gap-2 text-sm font-semibold">연락처<input className={inputClass} name="phone" required inputMode="tel" /></label>
-        <label className="grid gap-2 text-sm font-semibold">방문 지역<input className={inputClass} name="area" required /></label>
+        <label className="grid gap-2 text-sm font-semibold">출장마사지 지역<input className={inputClass} name="area" required /></label>
         <label className="grid gap-2 text-sm font-semibold">상세 주소<input className={inputClass} name="address" required /></label>
         <label className="grid gap-2 text-sm font-semibold">희망 날짜<input className={inputClass} name="date" required type="date" /></label>
         <label className="grid gap-2 text-sm font-semibold">희망 시간<input className={inputClass} name="time" required type="time" /></label>

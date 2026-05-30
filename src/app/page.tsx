@@ -76,7 +76,7 @@ export default function HomePage() {
 
       <section className="section bg-card">
         <div className="container">
-          <SectionHeading eyebrow="Trust" title="방문 웰니스 서비스를 선택하기 전 알아야 할 것" description="홈페이지에서도 핵심 운영 원칙을 충분히 확인할 수 있도록 상세 설명을 제공합니다." />
+          <SectionHeading eyebrow="Trust" title="출장마사지 웰니스 서비스를 선택하기 전 알아야 할 것" description="홈페이지에서도 핵심 운영 원칙을 충분히 확인할 수 있도록 상세 설명을 제공합니다." />
           <ContentBlocks blocks={homeBlocks} />
         </div>
       </section>
@@ -85,7 +85,7 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading eyebrow="Process" title="예약부터 피드백까지" />
           <div className="grid gap-4 md:grid-cols-5">
-            {["지역 및 시간 선택", "서비스 선택", "예약 확인", "테라피스트 방문", "관리 후 피드백"].map((step, index) => (
+            {["지역 및 시간 선택", "서비스 선택", "예약 확인", "테라피스트 도착", "관리 후 피드백"].map((step, index) => (
               <Card key={step}><p className="text-sm font-bold text-accent">STEP {index + 1}</p><p className="mt-3 font-semibold">{step}</p></Card>
             ))}
           </div>
@@ -151,7 +151,7 @@ export default function HomePage() {
       <section className="section bg-primary text-primary-foreground">
         <div className="container flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <h2 className="text-3xl font-bold">지금 가능한 방문 시간을 확인해보세요.</h2>
+            <h2 className="text-3xl font-bold">지금 가능한 출장마사지 시간을 확인해보세요.</h2>
             <p className="mt-3 text-white/75">예약 신청 후 가능 시간과 지역을 확인해 연락드립니다.</p>
           </div>
           <Button href="/booking" variant="secondary">예약하기</Button>

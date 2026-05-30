@@ -7,8 +7,8 @@ import { areas } from "@/data/areas";
 import { areaListBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
-  title: "출장마사지 가능 지역 | 서울 출장마사지 안내",
-  description: "강남, 송파, 마포 등 실제 출장마사지 가능 지역의 도착 시간, 출장비, 준비사항을 안내합니다.",
+  title: "출장마사지 가능 지역 | 강남 수원 인천 부산 안내",
+  description: "강남, 수원, 인천, 용인, 부산, 성남 출장마사지 가능 시간, 출장비, 준비사항을 안내합니다.",
   alternates: { canonical: "/areas" }
 };
 
