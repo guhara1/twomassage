@@ -1,0 +1,85 @@
+"use client";
+
+import { Menu, MessageCircle, Phone, X } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { business, mainNav } from "@/data/business";
+import { Button } from "./ui/button";
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
+      <div className="container flex h-16 items-center justify-between gap-4">
+        <Link href="/" className="flex items-center gap-3 font-bold">
+          <span className="grid h-10 w-10 place-items-center rounded-md bg-primary text-primary-foreground">T</span>
+          <span>투마사지</span>
+        </Link>
+
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="주요 메뉴">
+          <Link href="/" className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted">
+            홈
+          </Link>
+          {mainNav.map((group) => (
+            <div key={group.label} className="group relative">
+              <Link href={group.href} className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted">
+                {group.label}
+              </Link>
+              <div className="invisible absolute left-0 top-9 w-56 rounded-lg border border-border bg-card p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
+                {group.items.map(([label, href]) => (
+                  <Link key={href} href={href} className="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </nav>
+
+        <div className="hidden items-center gap-2 lg:flex">
+          <Button href={`tel:${business.phone}`} variant="outline" className="px-3">
+            <Phone className="h-4 w-4" /> 전화 상담
+          </Button>
+          <Button href={business.kakao} variant="outline" className="px-3">
+            <MessageCircle className="h-4 w-4" /> 카카오 상담
+          </Button>
+          <Button href="/booking">예약하기</Button>
+        </div>
+
+        <button
+          type="button"
+          className="focus-ring rounded-md border border-border p-2 lg:hidden"
+          onClick={() => setOpen((value) => !value)}
+          aria-label="모바일 메뉴 열기"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      {open ? (
+        <div className="border-t border-border bg-card lg:hidden">
+          <nav className="container grid gap-2 py-4" aria-label="모바일 메뉴">
+            <Link href="/" className="rounded-md px-3 py-2 font-medium" onClick={() => setOpen(false)}>
+              홈
+            </Link>
+            {mainNav.map((group) => (
+              <div key={group.label}>
+                <Link href={group.href} className="block rounded-md px-3 py-2 font-semibold" onClick={() => setOpen(false)}>
+                  {group.label}
+                </Link>
+                <div className="grid gap-1 ps-3">
+                  {group.items.map(([label, href]) => (
+                    <Link key={href} href={href} className="rounded-md px-3 py-2 text-sm text-muted-foreground" onClick={() => setOpen(false)}>
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </nav>
+        </div>
+      ) : null}
+    </header>
+  );
+}

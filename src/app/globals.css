@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Pretendard", "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --color-background: #fbfaf6;
+  --color-foreground: #17231f;
+  --color-card: #ffffff;
+  --color-card-foreground: #17231f;
+  --color-primary: #12392f;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #ebe4d7;
+  --color-secondary-foreground: #17231f;
+  --color-muted: #f2f0ea;
+  --color-muted-foreground: #65716b;
+  --color-accent: #b99a5b;
+  --color-accent-foreground: #17231f;
+  --color-border: #ded8ca;
+  --color-input: #ded8ca;
+  --color-ring: #1c6b55;
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-ring), transparent 35%);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+}
