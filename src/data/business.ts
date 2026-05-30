@@ -1,12 +1,13 @@
 export const business = {
   name: "투마사지",
-  legalName: "투마사지 출장마사지 웰니스 케어",
+  legalName: "YH LAB",
+  representative: "김유환",
   phone: "010-0000-0000",
   kakao: "https://pf.kakao.com/_placeholder",
   email: "care@twomassage.kr",
   hours: "매일 10:00-23:00 예약제 운영",
-  address: "서울특별시 강남구 테헤란로 000",
-  registration: "사업자등록번호 000-00-00000",
+  address: "경기도 파주시 청석로 268",
+  registration: "사업자등록번호 815-26-00585",
   description:
     "검증된 전문 테라피스트가 고객님의 공간으로 찾아가는 합법 출장마사지 웰니스 케어 서비스입니다.",
   principles: ["합법 운영", "예약제 상담", "투명한 요금", "위생 체크리스트", "부적절한 요청 거절"]

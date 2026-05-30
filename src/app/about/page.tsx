@@ -21,7 +21,7 @@ export default function AboutPage() {
           <p className="mt-5 max-w-3xl leading-8 text-muted-foreground">투마사지는 고객이 안심하고 예약할 수 있도록 합법성, 위생, 안전, 투명한 요금 안내를 우선합니다.</p>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             <Card><h2 className="text-xl font-bold">브랜드 미션</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">검증된 전문 테라피스트가 고객의 공간으로 찾아가는 합법 출장마사지 웰니스 케어 서비스를 제공합니다.</p></Card>
-            <Card><h2 className="text-xl font-bold">사업자 정보</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">{business.legalName}<br />{business.registration}<br />{business.address}</p></Card>
+            <Card><h2 className="text-xl font-bold">사업자 정보</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">회사: {business.legalName}<br />대표: {business.representative}<br />{business.registration}<br />주소: {business.address}</p></Card>
             <Card><h2 className="text-xl font-bold">고객지원</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">{business.phone}<br />{business.email}<br />{business.hours}</p></Card>
             <Card><h2 className="text-xl font-bold">서비스 원칙</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">불법·부적절 요청은 접수하지 않으며 고객과 테라피스트 보호 원칙을 예약 전 안내합니다.</p></Card>
           </div>

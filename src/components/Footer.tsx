@@ -9,7 +9,8 @@ export function Footer() {
           <p className="text-xl font-bold">투마사지</p>
           <p className="mt-3 max-w-xl text-sm leading-7 text-white/75">{business.description}</p>
           <dl className="mt-5 grid gap-2 text-sm text-white/75">
-            <div>상호: {business.legalName}</div>
+            <div>회사: {business.legalName}</div>
+            <div>대표: {business.representative}</div>
             <div>{business.registration}</div>
             <div>주소: {business.address}</div>
             <div>고객지원: {business.phone} · {business.email}</div>
