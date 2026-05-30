@@ -70,7 +70,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Button href={`tel:${business.phone}`} variant="outline" className="px-3">
+          <Button href={business.phoneHref} variant="outline" className="px-3">
             <Phone className="h-4 w-4" /> 전화 상담
           </Button>
           <Button href={business.kakao} variant="outline" className="px-3">

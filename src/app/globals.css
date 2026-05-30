@@ -74,6 +74,44 @@ select {
   }
 }
 
+.phone-float-button {
+  animation: phonePulse 2.4s ease-in-out infinite;
+}
+
+.phone-float-icon {
+  animation: phoneRing 1.7s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes phonePulse {
+  0%,
+  100% {
+    box-shadow: 0 18px 34px rgb(18 57 47 / 0.24);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 22px 42px rgb(18 57 47 / 0.34);
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes phoneRing {
+  0%,
+  78%,
+  100% {
+    transform: rotate(0deg);
+  }
+  84% {
+    transform: rotate(-14deg);
+  }
+  90% {
+    transform: rotate(14deg);
+  }
+  96% {
+    transform: rotate(-8deg);
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 48px 0;

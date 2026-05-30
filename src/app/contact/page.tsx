@@ -26,7 +26,7 @@ export default function ContactPage() {
             <h2 className="text-xl font-bold">고객지원</h2>
             <p className="mt-3 text-sm leading-7 text-muted-foreground">{business.phone}<br />{business.email}<br />{business.hours}</p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Button href={`tel:${business.phone}`}>전화 상담</Button>
+              <Button href={business.phoneHref}>전화 상담</Button>
               <Button href={business.kakao} variant="outline">카카오 상담</Button>
             </div>
           </Card>
