@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { areas } from "@/data/areas";
+import { pageCount, postCategories, postsByCategory } from "@/data/postCategories";
 import { posts } from "@/data/posts";
 import { services } from "@/data/services";
 import { absoluteUrl } from "@/lib/utils";
@@ -29,6 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...services.map((service) => `/services/${service.slug}`),
     ...areas.map((area) => `/areas/${area.slug}`),
+    ...postCategories.map((category) => `/wellness-guide/category/${category.slug}`),
+    ...postCategories.flatMap((category) =>
+      Array.from({ length: Math.max(0, pageCount(postsByCategory(category.slug).length) - 1) }, (_, index) => `/wellness-guide/category/${category.slug}/page/${index + 2}`)
+    ),
+    ...Array.from({ length: Math.max(0, pageCount(posts.length) - 1) }, (_, index) => `/wellness-guide/page/${index + 2}`),
     ...posts.map((post) => `/wellness-guide/${post.slug}`),
     "/authors/minseo-kim",
     "/authors/jiyoon-park"

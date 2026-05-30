@@ -302,7 +302,7 @@ const basePosts: GuidePost[] = [
     slug: "gangnam-office-worker-care",
     title: "강남 직장인을 위한 출장마사지 이용 팁",
     summary: "강남역, 역삼, 선릉, 삼성 생활권 직장인이 예약 전 확인하면 좋은 출입, 주차, 시간 선택 기준입니다.",
-    category: "지역 이용 가이드",
+    category: "지역 매거진",
     author: "minseo-kim",
     reviewer: "jiyoon-park",
     createdAt: "2026-05-30",

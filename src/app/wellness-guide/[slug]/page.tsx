@@ -4,9 +4,13 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { areas } from "@/data/areas";
 import { authors } from "@/data/authors";
+import { categorySlug } from "@/data/postCategories";
 import { posts } from "@/data/posts";
+import { services } from "@/data/services";
 import { articleSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -30,6 +34,12 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   if (!post) notFound();
   const author = authors.find((item) => item.slug === post.author);
   const reviewer = authors.find((item) => item.slug === post.reviewer);
+  const sameCategoryPosts = posts.filter((item) => item.slug !== post.slug && item.category === post.category).slice(0, 3);
+  const relatedPosts = sameCategoryPosts.length ? sameCategoryPosts : posts.filter((item) => item.slug !== post.slug).slice(0, 3);
+  const matchedAreas = areas.filter((area) => post.title.includes(area.name) || post.summary.includes(area.name)).slice(0, 3);
+  const relatedAreas = matchedAreas.length ? matchedAreas : areas.slice(0, 3);
+  const matchedServices = services.filter((service) => post.title.includes(service.name.split(" ")[0]) || post.summary.includes(service.name.split(" ")[0])).slice(0, 3);
+  const relatedServices = matchedServices.length ? matchedServices : services.slice(0, 3);
 
   return (
     <>
@@ -95,6 +105,49 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           <section className="mt-10">
             <h2 className="mb-5 text-2xl font-bold">FAQ</h2>
             <FAQAccordion items={post.faqs} />
+          </section>
+
+          <section className="mt-10">
+            <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+              <div>
+                <p className="text-sm font-bold text-accent">Related</p>
+                <h2 className="mt-2 text-2xl font-bold">함께 읽으면 좋은 글</h2>
+              </div>
+              <Button href={`/wellness-guide/category/${categorySlug(post.category)}`} variant="outline">{post.category} 더 보기</Button>
+            </div>
+            <div className="mt-5 grid gap-4 md:grid-cols-3">
+              {relatedPosts.map((item) => (
+                <Card key={item.slug}>
+                  <p className="text-sm font-bold text-accent">{item.category}</p>
+                  <h3 className="mt-3 font-bold">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.summary}</p>
+                  <Button href={`/wellness-guide/${item.slug}`} variant="ghost" className="mt-4 px-0">읽기</Button>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-10 grid gap-5 md:grid-cols-2">
+            <Card>
+              <h2 className="text-2xl font-bold">관련 서비스</h2>
+              <div className="mt-4 grid gap-2">
+                {relatedServices.map((service) => (
+                  <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-md border border-border px-3 py-2 text-sm font-semibold hover:bg-muted">
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            </Card>
+            <Card>
+              <h2 className="text-2xl font-bold">관련 지역</h2>
+              <div className="mt-4 grid gap-2">
+                {relatedAreas.map((area) => (
+                  <Link key={area.slug} href={`/areas/${area.slug}`} className="rounded-md border border-border px-3 py-2 text-sm font-semibold hover:bg-muted">
+                    {area.name} 출장마사지
+                  </Link>
+                ))}
+              </div>
+            </Card>
           </section>
         </div>
       </article>
