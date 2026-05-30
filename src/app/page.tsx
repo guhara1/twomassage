@@ -136,7 +136,7 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading eyebrow="Guide" title="웰니스 가이드 최신글" />
           <div className="grid gap-5 md:grid-cols-3">
-            {posts.map((post) => (
+            {posts.slice(0, 3).map((post) => (
               <Card key={post.slug}>
                 <p className="text-sm font-bold text-accent">{post.category}</p>
                 <p className="mt-3 text-lg font-bold">{post.title}</p>
