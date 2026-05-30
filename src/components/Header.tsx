@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, MessageCircle, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { business, mainNav } from "@/data/business";
@@ -46,7 +46,7 @@ export function Header() {
               {activeMenu === group.label ? (
                 <div className="absolute left-0 top-full w-60 pt-3">
                   <div className="rounded-lg border border-border bg-card p-2 shadow-lg">
-                    {group.items.map(([label, href]) => (
+                    {group.items.map(([label, href]) =>
                       href.startsWith("#heading:") ? (
                         <p key={href} className="px-3 pb-1 pt-3 text-xs font-bold text-accent first:pt-1">
                           {label}
@@ -61,7 +61,7 @@ export function Header() {
                           {label}
                         </Link>
                       )
-                    ))}
+                    )}
                   </div>
                 </div>
               ) : null}
@@ -72,9 +72,6 @@ export function Header() {
         <div className="hidden items-center gap-2 lg:flex">
           <Button href={business.phoneHref} variant="outline" className="px-3">
             <Phone className="h-4 w-4" /> 전화 상담
-          </Button>
-          <Button href={business.kakao} variant="outline" className="px-3">
-            <MessageCircle className="h-4 w-4" /> 카카오 상담
           </Button>
           <Button href="/booking">예약하기</Button>
         </div>
@@ -101,7 +98,7 @@ export function Header() {
                   {group.label}
                 </Link>
                 <div className="grid gap-1 ps-3">
-                  {group.items.map(([label, href]) => (
+                  {group.items.map(([label, href]) =>
                     href.startsWith("#heading:") ? (
                       <p key={href} className="px-3 pb-1 pt-3 text-xs font-bold text-accent">
                         {label}
@@ -111,7 +108,7 @@ export function Header() {
                         {label}
                       </Link>
                     )
-                  ))}
+                  )}
                 </div>
               </div>
             ))}
