@@ -11,7 +11,7 @@ export function MobileCta() {
       <Link href={business.kakao} className="flex flex-col items-center gap-1 rounded-md px-2 py-2 text-xs font-semibold">
         <MessageCircle className="h-4 w-4" /> 카카오 상담
       </Link>
-      <Link href="/booking" className="flex flex-col items-center gap-1 rounded-md bg-primary px-2 py-2 text-xs font-semibold text-primary-foreground">
+      <Link href="/booking" className="flex flex-col items-center gap-1 rounded-md bg-[#12392f] px-2 py-2 text-xs font-semibold text-white">
         <CalendarCheck className="h-4 w-4" /> 예약하기
       </Link>
     </div>

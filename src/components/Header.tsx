@@ -14,7 +14,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="container flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3 font-bold">
-          <span className="grid h-10 w-10 place-items-center rounded-md bg-primary text-primary-foreground">T</span>
+          <span className="grid h-10 w-10 place-items-center rounded-md bg-[#12392f] text-white">T</span>
           <span>투마사지</span>
         </Link>
 

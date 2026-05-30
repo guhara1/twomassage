@@ -148,7 +148,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section bg-primary text-primary-foreground">
+      <section className="section bg-[#12392f] text-white">
         <div className="container flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
             <h2 className="text-3xl font-bold">지금 가능한 출장마사지 시간을 확인해보세요.</h2>

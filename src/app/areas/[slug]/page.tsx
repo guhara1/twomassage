@@ -168,7 +168,7 @@ export default async function AreaDetailPage({ params }: { params: Promise<{ slu
           </div>
 
           <aside className="h-fit overflow-hidden rounded-lg border border-border bg-card shadow-xl lg:sticky lg:top-24">
-            <div className="bg-primary p-6 text-primary-foreground">
+            <div className="bg-[#12392f] p-6 text-white">
               <p className="text-sm font-bold text-[#e9d8a6]">{area.name} 상담 패널</p>
               <p className="mt-3 text-2xl font-bold leading-snug">예약 전 확인할 핵심 정보</p>
               <p className="mt-3 text-sm leading-7 text-white/75">가능 시간, 출장비, 출입 조건을 먼저 확인합니다.</p>
