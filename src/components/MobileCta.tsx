@@ -17,7 +17,7 @@ export function MobileCta() {
         <Link href={business.phoneHref} className="flex flex-col items-center gap-1 rounded-md px-2 py-2 text-xs font-semibold">
           <Phone className="h-4 w-4" /> 전화
         </Link>
-        <Link href="/booking" className="flex flex-col items-center gap-1 rounded-md bg-[#12392f] px-2 py-2 text-xs font-semibold !text-white">
+        <Link href="/booking" className="flex flex-col items-center gap-1 rounded-md bg-[#12392f] px-2 py-2 text-xs font-semibold !text-white [&_*]:!text-white">
           <CalendarCheck className="h-4 w-4" /> 예약하기
         </Link>
       </div>

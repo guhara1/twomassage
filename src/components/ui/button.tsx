@@ -11,7 +11,7 @@ type ButtonProps = {
 };
 
 const styles = {
-  primary: "bg-[#12392f] text-white hover:bg-[#0d2e26]",
+  primary: "bg-[#12392f] !text-white hover:bg-[#0d2e26] [&_*]:!text-white",
   secondary: "bg-accent text-accent-foreground hover:bg-[#aa8b4d]",
   outline: "border border-border bg-card text-foreground hover:bg-muted",
   ghost: "text-foreground hover:bg-muted"
