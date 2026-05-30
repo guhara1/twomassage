@@ -9,7 +9,7 @@ import { posts } from "@/data/posts";
 
 export const metadata: Metadata = {
   title: "웰니스 가이드",
-  description: "마사지 전후 관리, 직장인 피로 관리, 방문 마사지 안전 기준을 작성자와 검수자 정보와 함께 제공합니다.",
+  description: "마사지 전후 관리, 직장인 피로 관리, 출장마사지 안전 기준을 작성자와 검수자 정보와 함께 제공합니다.",
   alternates: { canonical: "/wellness-guide" }
 };
 

@@ -6,8 +6,8 @@ import { Card } from "@/components/ui/card";
 import { pricingBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
-  title: "방문 마사지 요금 안내 | 시간별 가격과 출장비",
-  description: "60분, 90분, 120분 방문 마사지 요금과 심야 비용, 지역 출장비, 취소·환불 기준을 투명하게 안내합니다.",
+  title: "출장마사지 요금 안내 | 시간별 가격과 출장비",
+  description: "60분, 90분, 120분 출장마사지 요금과 심야 비용, 지역 출장비, 취소·환불 기준을 투명하게 안내합니다.",
   alternates: { canonical: "/pricing" }
 };
 
@@ -17,7 +17,7 @@ export default function PricingPage() {
       <Breadcrumbs items={[{ label: "요금 안내", href: "/pricing" }]} />
       <section className="section">
         <div className="container">
-          <h1 className="text-4xl font-bold">방문 마사지 요금 안내</h1>
+          <h1 className="text-4xl font-bold">출장마사지 요금 안내</h1>
           <p className="mt-4 max-w-3xl leading-8 text-muted-foreground">출장비, 심야 시간 추가 비용, 주차비 발생 가능성은 예약 전 명확히 고지합니다.</p>
           <div className="mt-10 overflow-x-auto"><PricingTable /></div>
           <div className="mt-8 grid gap-5 md:grid-cols-2">

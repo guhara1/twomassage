@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = areas.find((item) => item.slug === slug);
   if (!area) return {};
   return {
-    title: `${area.name} 방문 마사지 | 예약제 웰니스 홈케어`,
-    description: `${area.name} 지역의 방문 가능 시간, 출장비, 준비사항, 많이 선택하는 서비스를 안내합니다.`,
+    title: `${area.name} 출장마사지 | 예약제 웰니스 홈케어`,
+    description: `${area.name} 지역의 출장마사지 가능 시간, 출장비, 준비사항, 많이 선택하는 서비스를 안내합니다.`,
     alternates: { canonical: `/areas/${area.slug}` }
   };
 }
@@ -36,8 +36,8 @@ export default async function AreaDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <>
-      <JsonLd data={[localBusinessSchema(), serviceSchema(`${area.name} 방문 마사지`, area.description, `/areas/${area.slug}`)]} />
-      <Breadcrumbs items={[{ label: "방문 가능 지역", href: "/areas" }, { label: area.name, href: `/areas/${area.slug}` }]} />
+      <JsonLd data={[localBusinessSchema(), serviceSchema(`${area.name} 출장마사지`, area.description, `/areas/${area.slug}`)]} />
+      <Breadcrumbs items={[{ label: "출장마사지 가능 지역", href: "/areas" }, { label: area.name, href: `/areas/${area.slug}` }]} />
       <section className="section">
         <div className="container grid gap-8 lg:grid-cols-[1fr_340px]">
           <div>

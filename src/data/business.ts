@@ -20,7 +20,7 @@ export const mainNav = [
       ["아로마 릴렉스 케어", "/services/aroma-relax-care"],
       ["스포츠 근육 케어", "/services/sports-muscle-care"],
       ["오피스 피로 케어", "/services/office-fatigue-care"],
-      ["커플·가족 방문 케어", "/services/family-couple-care"],
+      ["커플·가족 출장마사지 케어", "/services/family-couple-care"],
       ["서비스 비교표", "/services#compare"]
     ]
   },
@@ -30,7 +30,7 @@ export const mainNav = [
     items: [
       ["예약 방법", "/booking"],
       ["요금 안내", "/pricing"],
-      ["방문 가능 지역", "/areas"],
+      ["출장마사지 가능 지역", "/areas"],
       ["자주 묻는 질문", "/faq"]
     ]
   },
@@ -38,9 +38,9 @@ export const mainNav = [
     label: "지역안내",
     href: "/areas",
     items: [
-      ["강남 방문 마사지", "/areas/gangnam"],
-      ["송파 방문 마사지", "/areas/songpa"],
-      ["마포 방문 마사지", "/areas/mapo"]
+      ["강남 출장마사지", "/areas/gangnam"],
+      ["송파 출장마사지", "/areas/songpa"],
+      ["마포 출장마사지", "/areas/mapo"]
     ]
   },
   {

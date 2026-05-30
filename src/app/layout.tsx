@@ -21,11 +21,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(absoluteUrl("/")),
   title: {
-    default: "방문 마사지 예약 | 전문 테라피스트 웰니스 홈케어",
+    default: "출장마사지 예약 | 전문 테라피스트 웰니스 홈케어",
     template: "%s | 투마사지"
   },
   description:
-    "검증된 전문 테라피스트가 고객님의 공간으로 방문하는 합법 웰니스 마사지 서비스입니다. 요금, 지역, 위생 정책, 예약 절차를 투명하게 안내합니다.",
+    "검증된 전문 테라피스트가 고객님의 공간으로 찾아가는 합법 출장마사지 웰니스 서비스입니다. 요금, 지역, 위생 정책, 예약 절차를 투명하게 안내합니다.",
   alternates: {
     canonical: "/"
   },

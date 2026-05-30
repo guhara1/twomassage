@@ -8,8 +8,8 @@ import { serviceListBlocks } from "@/data/pageContent";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "방문 웰니스 마사지 서비스",
-  description: "아로마 릴렉스, 스포츠 근육, 오피스 피로, 커플·가족 방문 케어를 비교하고 예약 전 주의사항을 확인하세요.",
+  title: "출장마사지 웰니스 서비스",
+  description: "아로마 릴렉스, 스포츠 근육, 오피스 피로, 커플·가족 출장 케어를 비교하고 예약 전 주의사항을 확인하세요.",
   alternates: { canonical: "/services" }
 };
 
@@ -19,7 +19,7 @@ export default function ServicesPage() {
       <Breadcrumbs items={[{ label: "서비스", href: "/services" }]} />
       <section className="section">
         <div className="container">
-          <h1 className="text-4xl font-bold">방문 웰니스 마사지 서비스</h1>
+          <h1 className="text-4xl font-bold">출장마사지 웰니스 서비스</h1>
           <p className="mt-4 max-w-3xl leading-8 text-muted-foreground">건전한 웰니스 목적의 서비스만 제공하며, 각 서비스는 대상과 관리 목적, 주의사항을 명확히 구분합니다.</p>
           <div className="mt-10 grid gap-5 md:grid-cols-4">{services.map((service) => <ServiceCard key={service.slug} service={service} />)}</div>
           <div className="mt-10"><ContentBlocks blocks={serviceListBlocks} /></div>

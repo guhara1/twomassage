@@ -6,7 +6,7 @@ import { business } from "@/data/business";
 import { aboutBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
-  title: "회사 소개 | 방문 웰니스 마사지 운영 원칙",
+  title: "회사 소개 | 출장마사지 웰니스 운영 원칙",
   description: "투마사지의 합법 운영 원칙, 사업자 정보, 고객지원 연락처, 부적절한 요청 거절 정책을 안내합니다.",
   alternates: { canonical: "/about" }
 };

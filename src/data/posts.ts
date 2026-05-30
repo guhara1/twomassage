@@ -1,9 +1,9 @@
 export const posts = [
   {
     slug: "prepare-before-home-massage",
-    title: "방문 마사지 받기 전 준비해야 할 7가지",
+    title: "출장마사지 받기 전 준비해야 할 7가지",
     summary: "안전하고 편안한 방문 웰니스 케어를 위해 공간, 수건, 환기, 컨디션 확인을 준비하는 방법입니다.",
-    category: "방문 마사지 이용 가이드",
+    category: "출장마사지 이용 가이드",
     author: "minseo-kim",
     reviewer: "jiyoon-park",
     createdAt: "2026-05-20",

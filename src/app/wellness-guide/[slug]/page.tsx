@@ -32,7 +32,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const reviewer = authors.find((item) => item.slug === post.reviewer);
   const postFaqs = [
     { q: "이 글은 의료 조언인가요?", a: "아닙니다. 생활 정보 수준의 웰니스 안내이며 통증, 질환, 부상이 있다면 전문가 상담이 우선입니다." },
-    { q: "방문 마사지 예약 전 가장 중요한 확인사항은 무엇인가요?", a: "서비스 목적, 요금, 방문 가능 지역, 위생·안전 정책, 부적절한 요청 거절 기준을 확인하는 것이 좋습니다." }
+    { q: "출장마사지 예약 전 가장 중요한 확인사항은 무엇인가요?", a: "서비스 목적, 요금, 출장마사지 가능 지역, 위생·안전 정책, 부적절한 요청 거절 기준을 확인하는 것이 좋습니다." }
   ];
 
   return (
@@ -70,7 +70,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           </section>
           <section className="mt-10">
             <h2 className="text-2xl font-bold">관련 서비스와 연결하기</h2>
-            <p className="mt-4 leading-8 text-muted-foreground">편안한 휴식이 목적이라면 아로마 릴렉스 케어를, 운동 후 근육 피로가 목적이라면 스포츠 근육 케어를, 업무 후 목과 어깨 긴장이 크다면 오피스 피로 케어를 검토할 수 있습니다. 가족이나 커플이 같은 공간에서 순차적으로 이용하려면 커플·가족 방문 케어의 시간과 공간 조건을 먼저 확인하는 것이 좋습니다.</p>
+            <p className="mt-4 leading-8 text-muted-foreground">편안한 휴식이 목적이라면 아로마 릴렉스 케어를, 운동 후 근육 피로가 목적이라면 스포츠 근육 케어를, 업무 후 목과 어깨 긴장이 크다면 오피스 피로 케어를 검토할 수 있습니다. 가족이나 커플이 같은 공간에서 순차적으로 이용하려면 커플·가족 출장마사지 케어의 시간과 공간 조건을 먼저 확인하는 것이 좋습니다.</p>
           </section>
           <section className="mt-10 rounded-lg border border-border bg-muted p-6">
             <h2 className="text-2xl font-bold">주의사항</h2>

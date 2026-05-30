@@ -17,21 +17,21 @@ import { homeBlocks } from "@/data/pageContent";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "방문 마사지 예약 | 전문 테라피스트 웰니스 홈케어",
-  description: "검증된 전문 테라피스트가 고객님의 공간으로 방문하는 합법 웰니스 마사지 서비스입니다. 요금, 지역, 위생 정책, 예약 절차를 투명하게 안내합니다.",
+  title: "출장마사지 예약 | 전문 테라피스트 웰니스 홈케어",
+  description: "검증된 전문 테라피스트가 고객님의 공간으로 찾아가는 합법 출장마사지 웰니스 서비스입니다. 요금, 지역, 위생 정책, 예약 절차를 투명하게 안내합니다.",
   alternates: { canonical: "/" }
 };
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={serviceSchema("방문 웰니스 마사지", "전문 테라피스트가 방문하는 합법 웰니스 홈케어 서비스", "/")} />
+      <JsonLd data={serviceSchema("출장마사지 웰니스 케어", "전문 테라피스트가 고객 공간으로 찾아가는 합법 웰니스 홈케어 서비스", "/")} />
       <section className="relative overflow-hidden bg-[#12392f] text-white">
         <div className="container grid min-h-[620px] items-center gap-10 py-16 md:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <p className="mb-4 inline-flex rounded-md bg-white/10 px-3 py-1 text-sm font-semibold text-[#e9d8a6]">합법 방문 웰니스 케어</p>
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">전문 테라피스트가 방문하는 웰니스 마사지 홈케어</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">피로가 쌓인 하루, 고객님의 공간에서 편안하게 관리받으세요. 예약제 방문 마사지 서비스로, 테라피스트 검증·위생 관리·요금 안내를 투명하게 운영합니다.</p>
+            <p className="mb-4 inline-flex rounded-md bg-white/10 px-3 py-1 text-sm font-semibold text-[#e9d8a6]">합법 출장마사지 웰니스 케어</p>
+            <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">전문 테라피스트가 찾아가는 출장마사지 홈케어</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">피로가 쌓인 하루, 고객님의 공간에서 편안하게 관리받으세요. 예약제 출장마사지 서비스로, 테라피스트 검증·위생 관리·요금 안내를 투명하게 운영합니다.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/booking" variant="secondary">지금 예약하기</Button>
               <Button href="/pricing" variant="outline" className="border-white/25 bg-white/10 text-white hover:bg-white/15">요금 확인하기</Button>
@@ -101,11 +101,11 @@ export default function HomePage() {
 
       <section className="section bg-card">
         <div className="container">
-          <SectionHeading eyebrow="Areas" title="방문 가능 지역" description="실제 서비스 가능 지역만 운영하며, 각 지역의 출입·주차·출장비 정보를 다르게 안내합니다." />
+          <SectionHeading eyebrow="Areas" title="출장마사지 가능 지역" description="실제 서비스 가능 지역만 운영하며, 각 지역의 출입·주차·출장비 정보를 다르게 안내합니다." />
           <div className="grid gap-5 md:grid-cols-3">
             {areas.map((area) => (
               <Card key={area.slug}>
-                <p className="text-xl font-bold">{area.name} 방문 마사지</p>
+                <p className="text-xl font-bold">{area.name} 출장마사지</p>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{area.description}</p>
                 <Button href={`/areas/${area.slug}`} variant="outline" className="mt-5">지역 안내 보기</Button>
               </Card>

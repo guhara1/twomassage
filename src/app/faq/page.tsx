@@ -9,7 +9,7 @@ import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "자주 묻는 질문",
-  description: "방문 마사지 합법성, 이용 공간, 준비사항, 테라피스트 지정, 후기 관리 기준을 안내합니다.",
+  description: "출장마사지 합법성, 이용 공간, 준비사항, 테라피스트 지정, 후기 관리 기준을 안내합니다.",
   alternates: { canonical: "/faq" }
 };
 

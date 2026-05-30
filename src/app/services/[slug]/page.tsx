@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = services.find((item) => item.slug === slug);
   if (!service) return {};
   return {
-    title: service.name.includes("아로마") ? "아로마 방문 마사지 | 릴렉스 홈케어 예약" : service.name.includes("스포츠") ? "스포츠 방문 마사지 | 근육 피로 케어" : service.name.includes("오피스") ? "직장인 방문 마사지 | 오피스 피로 케어" : "가족·커플 방문 마사지 | 예약제 홈케어",
+    title: service.name.includes("아로마") ? "아로마 출장마사지 | 릴렉스 홈케어 예약" : service.name.includes("스포츠") ? "스포츠 출장마사지 | 근육 피로 케어" : service.name.includes("오피스") ? "직장인 출장마사지 | 오피스 피로 케어" : "가족·커플 출장마사지 | 예약제 홈케어",
     description: service.short,
     alternates: { canonical: `/services/${service.slug}` }
   };
