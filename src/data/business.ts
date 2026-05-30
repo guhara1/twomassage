@@ -5,7 +5,7 @@ export const business = {
   phone: "0508-202-4743",
   phoneHref: "tel:05082024743",
   kakao: "https://pf.kakao.com/_placeholder",
-  email: "care@twomassage.kr",
+  email: "help@2massage.club",
   hours: "매일 10:00-23:00 예약제 운영",
   address: "경기도 파주시 청석로 268",
   registration: "사업자등록번호 815-26-00585",
