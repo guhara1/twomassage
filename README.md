@@ -9,6 +9,13 @@ npm install
 npm run dev
 ```
 
+## Cloudflare Pages 설정
+
+- Framework preset: `Next.js`
+- Build command: `npm run build`
+- Build output directory: `out`
+- Node.js version: `22`
+
 ## 포함 항목
 
 - 서비스, 요금, 예약, 지역, 신뢰센터, 후기, FAQ, 웰니스 가이드 페이지
