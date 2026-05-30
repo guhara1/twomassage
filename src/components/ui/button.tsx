@@ -7,7 +7,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   className?: string;
   type?: "button" | "submit";
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const styles = {
