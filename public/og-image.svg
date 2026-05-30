@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">투마사지 출장마사지 웰니스 홈케어</title>
+  <desc id="desc">딥 그린 배경 위에 투마사지 브랜드명과 출장마사지 웰니스 홈케어 안내 문구가 있는 대표 이미지</desc>
+  <rect width="1200" height="630" fill="#12392f"/>
+  <path d="M0 520 C180 460 320 595 520 530 C760 452 890 392 1200 470 L1200 630 L0 630 Z" fill="#b99a5b" opacity="0.22"/>
+  <path d="M920 0 L1200 0 L1200 280 C1090 235 985 150 920 0 Z" fill="#f7f2e8" opacity="0.12"/>
+  <rect x="88" y="78" width="86" height="86" rx="14" fill="#f7f2e8"/>
+  <text x="131" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#12392f">T</text>
+  <text x="88" y="245" font-family="Arial, sans-serif" font-size="72" font-weight="800" fill="#ffffff">투마사지</text>
+  <text x="88" y="322" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#f4e2ae">출장마사지 웰니스 홈케어</text>
+  <text x="88" y="395" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" opacity="0.82">예약제 운영 · 투명한 요금 · 위생·안전 기준 공개</text>
+  <text x="88" y="478" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#f7f2e8">0508-202-4743</text>
+</svg>

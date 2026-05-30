@@ -37,7 +37,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    siteName: "투마사지"
+    siteName: "투마사지",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "투마사지 출장마사지 웰니스 홈케어 대표 이미지"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.svg"]
   }
 };
 

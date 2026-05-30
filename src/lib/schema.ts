@@ -93,6 +93,7 @@ export function articleSchema(post: {
       "@type": "Organization",
       name: business.legalName
     },
+    image: absoluteUrl("/og-image.svg"),
     url: absoluteUrl(`/wellness-guide/${post.slug}`)
   };
 }
