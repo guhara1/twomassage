@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { WellnessPostGrid } from "@/components/WellnessPostGrid";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { authors } from "@/data/authors";
@@ -28,6 +29,15 @@ export default async function WellnessGuideCategoryPage({ params }: { params: Pr
   const categoryPosts = postsByCategory(category.slug);
   const visiblePosts = paginatedPosts(categoryPosts, 1);
   const totalPages = pageCount(categoryPosts.length);
+  const visibleCards = visiblePosts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    summary: post.summary,
+    category: post.category,
+    categoryHref: `/wellness-guide/category/${category.slug}`,
+    authorName: authors.find((item) => item.slug === post.author)?.name ?? "투마사지 편집팀",
+    updatedAt: post.updatedAt
+  }));
 
   return (
     <>
@@ -48,19 +58,8 @@ export default async function WellnessGuideCategoryPage({ params }: { params: Pr
 
           <p className="mt-6 text-sm text-muted-foreground">페이지당 {POSTS_PER_PAGE}개 · 이 카테고리 {categoryPosts.length}개 글</p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {visiblePosts.map((post) => {
-              const author = authors.find((item) => item.slug === post.author);
-              return (
-                <Card key={post.slug}>
-                  <p className="text-sm font-bold text-accent">{post.category}</p>
-                  <h2 className="mt-3 text-xl font-bold">{post.title}</h2>
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{post.summary}</p>
-                  <p className="mt-4 text-xs text-muted-foreground">작성자 {author?.name} · 업데이트 {post.updatedAt}</p>
-                  <Button href={`/wellness-guide/${post.slug}`} variant="outline" className="mt-5">글 읽기</Button>
-                </Card>
-              );
-            })}
+          <div className="mt-10">
+            <WellnessPostGrid posts={visibleCards} initialCount={9} step={3} />
           </div>
 
           {totalPages > 1 ? (

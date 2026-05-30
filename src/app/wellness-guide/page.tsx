@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContentBlocks } from "@/components/ContentBlocks";
+import { WellnessPostGrid } from "@/components/WellnessPostGrid";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { authors } from "@/data/authors";
@@ -17,6 +18,15 @@ export const metadata: Metadata = {
 export default function WellnessGuidePage() {
   const featuredPosts = posts.slice(-3).reverse();
   const latestPosts = paginatedPosts([...posts].reverse(), 1);
+  const latestCards = latestPosts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    summary: post.summary,
+    category: post.category,
+    categoryHref: `/wellness-guide/category/${categorySlug(post.category)}`,
+    authorName: authors.find((item) => item.slug === post.author)?.name ?? "투마사지 편집팀",
+    updatedAt: post.updatedAt
+  }));
   const totalPages = pageCount(posts.length);
 
   return (
@@ -72,19 +82,8 @@ export default function WellnessGuidePage() {
               </div>
               <p className="text-sm text-muted-foreground">페이지당 {POSTS_PER_PAGE}개 · 전체 {posts.length}개</p>
             </div>
-            <div className="mt-6 grid gap-5 md:grid-cols-3">
-              {latestPosts.map((post) => {
-              const author = authors.find((item) => item.slug === post.author);
-              return (
-                <Card key={post.slug}>
-                  <Button href={`/wellness-guide/category/${categorySlug(post.category)}`} variant="ghost" className="h-auto px-0 py-0 text-sm font-bold text-accent hover:bg-transparent">{post.category}</Button>
-                  <h2 className="mt-3 text-xl font-bold">{post.title}</h2>
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{post.summary}</p>
-                  <p className="mt-4 text-xs text-muted-foreground">작성자 {author?.name} · 업데이트 {post.updatedAt}</p>
-                  <Button href={`/wellness-guide/${post.slug}`} variant="outline" className="mt-5">글 읽기</Button>
-                </Card>
-              );
-            })}
+            <div className="mt-6">
+              <WellnessPostGrid posts={latestCards} initialCount={9} step={3} />
             </div>
             {totalPages > 1 ? (
               <div className="mt-8 flex flex-wrap gap-2">

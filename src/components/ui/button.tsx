@@ -7,6 +7,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   className?: string;
   type?: "button" | "submit";
+  onClick?: () => void;
 };
 
 const styles = {
@@ -16,7 +17,7 @@ const styles = {
   ghost: "text-foreground hover:bg-muted"
 };
 
-export function Button({ href, children, variant = "primary", className, type = "button" }: ButtonProps) {
+export function Button({ href, children, variant = "primary", className, type = "button", onClick }: ButtonProps) {
   const classes = cn(
     "focus-ring inline-flex h-11 items-center justify-center gap-2 rounded-md px-5 text-sm font-semibold transition",
     styles[variant],
@@ -32,7 +33,7 @@ export function Button({ href, children, variant = "primary", className, type = 
   }
 
   return (
-    <button type={type} className={classes}>
+    <button type={type} className={classes} onClick={onClick}>
       {children}
     </button>
   );
