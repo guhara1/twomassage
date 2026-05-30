@@ -4,6 +4,8 @@ import { posts } from "@/data/posts";
 import { services } from "@/data/services";
 import { absoluteUrl } from "@/lib/utils";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "/",
