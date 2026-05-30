@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { areas } from "@/data/areas";
+import { posts } from "@/data/posts";
 import { faqSchema, localBusinessSchema, serviceSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -36,6 +37,9 @@ export default async function AreaDetailPage({ params }: { params: Promise<{ slu
     { label: "출장비", value: area.fee, Icon: WalletCards },
     { label: "선호 서비스", value: area.popular.join(", "), Icon: ShieldCheck }
   ];
+  const relatedPosts = posts
+    .filter((post) => post.category === "지역 매거진" && (post.title.includes(area.name) || post.summary.includes(area.name)))
+    .slice(0, 2);
 
   return (
     <>
@@ -159,6 +163,28 @@ export default async function AreaDetailPage({ params }: { params: Promise<{ slu
                 ]}
               />
             </div>
+
+            {relatedPosts.length ? (
+              <section className="mt-12">
+                <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+                  <div>
+                    <p className="text-sm font-bold text-accent">Magazine</p>
+                    <h2 className="mt-2 text-3xl font-bold">{area.name} 출장마사지 관련 가이드</h2>
+                  </div>
+                  <Button href="/wellness-guide/category/regional-guide" variant="outline">지역 매거진 더 보기</Button>
+                </div>
+                <div className="mt-6 grid gap-5 md:grid-cols-2">
+                  {relatedPosts.map((post) => (
+                    <Card key={post.slug}>
+                      <p className="text-sm font-bold text-accent">{post.category}</p>
+                      <h3 className="mt-3 text-xl font-bold">{post.title}</h3>
+                      <p className="mt-3 text-sm leading-7 text-muted-foreground">{post.summary}</p>
+                      <Button href={`/wellness-guide/${post.slug}`} variant="outline" className="mt-5">가이드 읽기</Button>
+                    </Card>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             <div className="mt-12 rounded-lg border border-border bg-[#f7f3ea] p-6 md:p-8">
               <p className="text-sm font-bold text-accent">FAQ</p>

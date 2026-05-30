@@ -26,6 +26,10 @@ export default function AreasPage() {
         <div className="container">
           <h1 className="text-4xl font-bold">출장마사지 가능 지역</h1>
           <p className="mt-4 max-w-3xl leading-8 text-muted-foreground">지역 페이지는 실제 서비스 가능한 곳만 운영합니다. 각 지역의 출입 조건, 평균 도착 시간, 출장비를 고유하게 안내합니다.</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button href="/pricing" variant="outline">출장마사지 요금 안내</Button>
+            <Button href="/booking">예약 가능 시간 확인</Button>
+          </div>
           <div className="mt-10 grid gap-10">
             {areaGroups.map((group) => (
               <section key={group.title}>

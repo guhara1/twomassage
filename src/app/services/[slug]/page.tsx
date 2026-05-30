@@ -58,6 +58,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <p className="mt-3 text-sm leading-7 text-muted-foreground">예약 신청 후 가능 시간과 지역을 확인해 연락드립니다. 부적절한 요청은 접수되지 않습니다.</p>
             <Button href="/booking" className="mt-5 w-full">예약하기</Button>
             <Button href="/pricing" variant="outline" className="mt-3 w-full">요금 확인</Button>
+            <div className="mt-6 border-t border-border pt-5">
+              <p className="text-sm font-bold">함께 확인하면 좋은 페이지</p>
+              <div className="mt-3 grid gap-2">
+                <Button href="/areas" variant="outline" className="w-full">출장마사지 가능 지역</Button>
+                <Button href="/trust/safety-hygiene" variant="outline" className="w-full">위생·안전 정책</Button>
+                <Button href="/trust/therapist-standards" variant="outline" className="w-full">테라피스트 검증 기준</Button>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
