@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { Card } from "@/components/ui/card";
+import { trustBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
   title: "위생과 안전을 우선하는 방문 케어 정책",
@@ -18,6 +20,7 @@ export default function SafetyHygienePage() {
           <h1 className="text-4xl font-bold">위생과 안전을 우선하는 방문 케어 정책</h1>
           <p className="mt-5 max-w-3xl leading-8 text-muted-foreground">건전한 웰니스 서비스 운영을 위해 예약 전후 확인 절차와 현장 중단 기준을 공개합니다.</p>
           <div className="mt-10 grid gap-5 md:grid-cols-4">{items.map((item) => <Card key={item}><h2 className="text-lg font-bold">{item}</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">예약 단계와 현장 운영 단계에서 체크리스트로 관리합니다.</p></Card>)}</div>
+          <div className="mt-10"><ContentBlocks blocks={trustBlocks.safety} /></div>
         </div>
       </section>
     </>

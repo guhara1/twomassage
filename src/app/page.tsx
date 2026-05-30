@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/JsonLd";
@@ -12,6 +13,7 @@ import { areas } from "@/data/areas";
 import { posts } from "@/data/posts";
 import { reviews } from "@/data/reviews";
 import { services } from "@/data/services";
+import { homeBlocks } from "@/data/pageContent";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -69,6 +71,13 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading eyebrow="Services" title="서비스 요약" description="각 서비스는 대상, 목적, 주의사항을 다르게 안내하며 의료 행위나 치료 보장을 표현하지 않습니다." />
           <div className="grid gap-5 md:grid-cols-4">{services.map((service) => <ServiceCard key={service.slug} service={service} />)}</div>
+        </div>
+      </section>
+
+      <section className="section bg-card">
+        <div className="container">
+          <SectionHeading eyebrow="Trust" title="방문 웰니스 서비스를 선택하기 전 알아야 할 것" description="홈페이지에서도 핵심 운영 원칙을 충분히 확인할 수 있도록 상세 설명을 제공합니다." />
+          <ContentBlocks blocks={homeBlocks} />
         </div>
       </section>
 

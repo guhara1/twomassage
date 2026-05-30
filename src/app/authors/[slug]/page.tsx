@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { Card } from "@/components/ui/card";
 import { authors } from "@/data/authors";
+import { authorBlocks } from "@/data/pageContent";
 import { posts } from "@/data/posts";
 
 export function generateStaticParams() {
@@ -46,6 +48,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
             <Card><h2 className="text-xl font-bold">작성한 글</h2><ul className="mt-4 grid gap-2 text-sm text-muted-foreground">{written.map((post) => <li key={post.slug}>{post.title}</li>)}</ul></Card>
             <Card><h2 className="text-xl font-bold">검수한 글</h2><ul className="mt-4 grid gap-2 text-sm text-muted-foreground">{reviewed.map((post) => <li key={post.slug}>{post.title}</li>)}</ul></Card>
           </div>
+          <div className="mt-10"><ContentBlocks blocks={authorBlocks} /></div>
         </div>
       </section>
     </>

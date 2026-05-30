@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { PricingTable } from "@/components/PricingTable";
 import { Card } from "@/components/ui/card";
+import { pricingBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
   title: "방문 마사지 요금 안내 | 시간별 가격과 출장비",
@@ -24,6 +26,7 @@ export default function PricingPage() {
             <Card><h2 className="text-xl font-bold">미포함 사항</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">의료 진단, 치료 행위, 의약품 제공, 부적절하거나 불법적인 서비스는 포함되지 않습니다.</p></Card>
             <Card><h2 className="text-xl font-bold">환불·취소 기준</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">예약 확정 전 취소는 수수료가 없으며, 당일 취소와 방문 직전 변경은 상담 시 고지된 기준에 따라 처리됩니다.</p></Card>
           </div>
+          <div className="mt-10"><ContentBlocks blocks={pricingBlocks} /></div>
         </div>
       </section>
     </>

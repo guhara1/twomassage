@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { faqs } from "@/data/faqs";
+import { faqBlocks } from "@/data/pageContent";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -20,6 +22,7 @@ export default function FAQPage() {
         <div className="container max-w-3xl">
           <h1 className="text-4xl font-bold">자주 묻는 질문</h1>
           <div className="mt-10"><FAQAccordion /></div>
+          <div className="mt-10"><ContentBlocks blocks={faqBlocks} /></div>
         </div>
       </section>
     </>

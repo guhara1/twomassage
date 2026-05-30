@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { Card } from "@/components/ui/card";
 import { business } from "@/data/business";
+import { aboutBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
   title: "회사 소개 | 방문 웰니스 마사지 운영 원칙",
@@ -23,6 +25,7 @@ export default function AboutPage() {
             <Card><h2 className="text-xl font-bold">고객지원</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">{business.phone}<br />{business.email}<br />{business.hours}</p></Card>
             <Card><h2 className="text-xl font-bold">서비스 원칙</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">불법·부적절 요청은 접수하지 않으며 고객과 테라피스트 보호 원칙을 예약 전 안내합니다.</p></Card>
           </div>
+          <div className="mt-10"><ContentBlocks blocks={aboutBlocks} /></div>
         </div>
       </section>
     </>

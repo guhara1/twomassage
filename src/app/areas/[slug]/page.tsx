@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
@@ -49,6 +50,7 @@ export default async function AreaDetailPage({ params }: { params: Promise<{ slu
               <Card><h2 className="text-xl font-bold">많이 선택하는 서비스</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">{area.popular.join(", ")}</p></Card>
             </div>
             <Card className="mt-6"><h2 className="text-xl font-bold">방문 시 유의사항</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">{area.note}</p></Card>
+            <div className="mt-10"><ContentBlocks blocks={area.detailBlocks} /></div>
             <div className="mt-10"><h2 className="mb-5 text-2xl font-bold">지역 FAQ</h2><FAQAccordion items={faqs} /></div>
           </div>
           <aside className="h-fit rounded-lg border border-border bg-card p-6 lg:sticky lg:top-24">

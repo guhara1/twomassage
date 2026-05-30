@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const siteUrl = "https://twomassage.vercel.app";
+export const siteUrl = "https://twomassage.pages.dev";
 
 export function absoluteUrl(path = "/") {
   return `${siteUrl}${path}`;

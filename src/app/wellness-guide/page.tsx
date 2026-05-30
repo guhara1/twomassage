@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { authors } from "@/data/authors";
+import { wellnessGuideBlocks } from "@/data/pageContent";
 import { posts } from "@/data/posts";
 
 export const metadata: Metadata = {
@@ -33,6 +35,7 @@ export default function WellnessGuidePage() {
               );
             })}
           </div>
+          <div className="mt-10"><ContentBlocks blocks={wellnessGuideBlocks} /></div>
         </div>
       </section>
     </>

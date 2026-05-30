@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
+import { policyBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
   title: "이용약관",
@@ -16,6 +18,7 @@ export default function TermsPage() {
         <div className="container max-w-3xl">
           <h1 className="text-4xl font-bold">이용약관</h1>
           <ul className="mt-8 grid gap-4 leading-8 text-muted-foreground">{items.map((item) => <li key={item}>· {item}</li>)}</ul>
+          <div className="mt-10"><ContentBlocks blocks={policyBlocks.terms} /></div>
         </div>
       </section>
     </>

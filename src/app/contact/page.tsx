@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { business } from "@/data/business";
+import { contactBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
   title: "문의하기",
@@ -28,6 +30,9 @@ export default function ContactPage() {
               <Button href={business.kakao} variant="outline">카카오 상담</Button>
             </div>
           </Card>
+        </div>
+        <div className="container mt-10">
+          <ContentBlocks blocks={contactBlocks} />
         </div>
       </section>
     </>

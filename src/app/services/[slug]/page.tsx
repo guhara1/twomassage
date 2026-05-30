@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
@@ -49,6 +50,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <Card><h2 className="text-xl font-bold">가격</h2><p className="mt-4 text-sm leading-7 text-muted-foreground">{service.price}<br />출장비와 심야 요금은 예약 전 별도 고지합니다.</p></Card>
             </div>
             <Card className="mt-6 border-primary/30 bg-[#f7f2e8]"><h2 className="text-xl font-bold">주의사항</h2><p className="mt-3 text-sm leading-7 text-muted-foreground">{service.caution}</p></Card>
+            <div className="mt-10"><ContentBlocks blocks={service.detailBlocks} /></div>
             <div className="mt-10"><h2 className="mb-5 text-2xl font-bold">자주 묻는 질문</h2><FAQAccordion items={pageFaqs} /></div>
           </div>
           <aside className="h-fit rounded-lg border border-border bg-card p-6 lg:sticky lg:top-24">

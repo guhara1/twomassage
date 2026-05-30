@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContentBlocks } from "@/components/ContentBlocks";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { areas } from "@/data/areas";
+import { areaListBlocks } from "@/data/pageContent";
 
 export const metadata: Metadata = {
   title: "방문 가능 지역 | 서울 방문 마사지 안내",
@@ -31,6 +33,7 @@ export default function AreasPage() {
               </Card>
             ))}
           </div>
+          <div className="mt-10"><ContentBlocks blocks={areaListBlocks} /></div>
         </div>
       </section>
     </>
