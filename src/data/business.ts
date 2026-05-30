@@ -38,12 +38,18 @@ export const mainNav = [
     label: "지역안내",
     href: "/areas",
     items: [
+      ["전체 지역 보기", "/areas"],
+      ["서울", "#heading:서울"],
       ["강남 출장마사지", "/areas/gangnam"],
+      ["송파 출장마사지", "/areas/songpa"],
+      ["마포 출장마사지", "/areas/mapo"],
+      ["경기·인천", "#heading:경기·인천"],
       ["수원 출장마사지", "/areas/suwon"],
-      ["인천 출장마사지", "/areas/incheon"],
       ["용인 출장마사지", "/areas/yongin"],
-      ["부산 출장마사지", "/areas/busan"],
-      ["성남 출장마사지", "/areas/seongnam"]
+      ["성남 출장마사지", "/areas/seongnam"],
+      ["인천 출장마사지", "/areas/incheon"],
+      ["부산", "#heading:부산"],
+      ["부산 출장마사지", "/areas/busan"]
     ]
   },
   {

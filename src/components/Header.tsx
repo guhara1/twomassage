@@ -47,14 +47,20 @@ export function Header() {
                 <div className="absolute left-0 top-full w-60 pt-3">
                   <div className="rounded-lg border border-border bg-card p-2 shadow-lg">
                     {group.items.map(([label, href]) => (
-                      <Link
-                        key={href}
-                        href={href}
-                        className="focus-ring block rounded-md px-3 py-2.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
-                        onClick={() => setActiveMenu(null)}
-                      >
-                        {label}
-                      </Link>
+                      href.startsWith("#heading:") ? (
+                        <p key={href} className="px-3 pb-1 pt-3 text-xs font-bold text-accent first:pt-1">
+                          {label}
+                        </p>
+                      ) : (
+                        <Link
+                          key={href}
+                          href={href}
+                          className="focus-ring block rounded-md px-3 py-2.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
+                          onClick={() => setActiveMenu(null)}
+                        >
+                          {label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>
@@ -96,9 +102,15 @@ export function Header() {
                 </Link>
                 <div className="grid gap-1 ps-3">
                   {group.items.map(([label, href]) => (
-                    <Link key={href} href={href} className="rounded-md px-3 py-2 text-sm text-muted-foreground" onClick={() => setOpen(false)}>
-                      {label}
-                    </Link>
+                    href.startsWith("#heading:") ? (
+                      <p key={href} className="px-3 pb-1 pt-3 text-xs font-bold text-accent">
+                        {label}
+                      </p>
+                    ) : (
+                      <Link key={href} href={href} className="rounded-md px-3 py-2 text-sm text-muted-foreground" onClick={() => setOpen(false)}>
+                        {label}
+                      </Link>
+                    )
                   ))}
                 </div>
               </div>
