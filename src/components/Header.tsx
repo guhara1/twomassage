@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
@@ -22,17 +23,42 @@ export function Header() {
             홈
           </Link>
           {mainNav.map((group) => (
-            <div key={group.label} className="group relative">
-              <Link href={group.href} className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted">
+            <div
+              key={group.label}
+              className="relative"
+              onMouseEnter={() => setActiveMenu(group.label)}
+              onMouseLeave={() => setActiveMenu(null)}
+              onFocus={() => setActiveMenu(group.label)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setActiveMenu(null);
+                }
+              }}
+            >
+              <Link
+                href={group.href}
+                className="focus-ring rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
+                aria-haspopup="true"
+                aria-expanded={activeMenu === group.label}
+              >
                 {group.label}
               </Link>
-              <div className="invisible absolute left-0 top-9 w-56 rounded-lg border border-border bg-card p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
-                {group.items.map(([label, href]) => (
-                  <Link key={href} href={href} className="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">
-                    {label}
-                  </Link>
-                ))}
-              </div>
+              {activeMenu === group.label ? (
+                <div className="absolute left-0 top-full w-60 pt-3">
+                  <div className="rounded-lg border border-border bg-card p-2 shadow-lg">
+                    {group.items.map(([label, href]) => (
+                      <Link
+                        key={href}
+                        href={href}
+                        className="focus-ring block rounded-md px-3 py-2.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
+                        onClick={() => setActiveMenu(null)}
+                      >
+                        {label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
           ))}
         </nav>
