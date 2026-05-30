@@ -41,6 +41,14 @@ a {
   text-decoration: none;
 }
 
+.btn-primary,
+.btn-primary:visited,
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-primary * {
+  color: #ffffff !important;
+}
+
 button,
 input,
 textarea,
