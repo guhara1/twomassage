@@ -18,8 +18,12 @@ import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "출장마사지 예약 | 전문 테라피스트 웰니스 홈케어",
-  description: "검증된 전문 테라피스트가 고객님의 공간으로 찾아가는 합법 출장마사지 웰니스 서비스입니다. 요금, 지역, 위생 정책, 예약 절차를 투명하게 안내합니다.",
+  description: "검증된 전문 테라피스트의 합법 출장마사지 웰니스 홈케어. 요금·지역·위생 기준을 안내합니다.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "출장마사지 예약 | 전문 테라피스트 웰니스 홈케어",
+    description: "검증된 전문 테라피스트의 합법 출장마사지 웰니스 홈케어. 요금·지역·위생 기준을 안내합니다."
+  },
   verification: {
     google: "hX-BPysZwO8dOIuy4hqZXO-hrzG4UUFIWJBj5l6nwWg"
   },
