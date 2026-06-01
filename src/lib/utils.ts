@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const siteUrl = "https://twomassage.club";
+export const siteUrl = "https://2massage.club";
 
 export function absoluteUrl(path = "/") {
   return `${siteUrl}${path}`;
